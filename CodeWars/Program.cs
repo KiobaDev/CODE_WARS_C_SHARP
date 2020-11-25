@@ -56,5 +56,22 @@ namespace CodeWars
                 return true;
             }
         }
+        //funkcja wypisujaca napis "Found the needle at position" oraz index w tablicy danego napisu 
+        public static string FindNeedle(object[] haystack)
+        {
+            string no="empty";
+            string msg;
+            var index=-1;
+            foreach(var item in haystack)
+            {
+                index++;
+                if(item=="needle")
+                {
+                    msg = ("found the needle at position " + index).ToString();
+                    return msg;
+                }
+            }
+            return no;
+        }
     }
 }
