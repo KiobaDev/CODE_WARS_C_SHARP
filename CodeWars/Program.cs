@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CodeWars
 {
@@ -14,14 +14,17 @@ namespace CodeWars
             string str = "";
             if (s.Length % 2 == 0)
             {
-               
-                str += s[x-1];
-                str += s[x ];
+                str += s[x - 1];
+                str += s[x];
                 return str;
             }
-            else 
+            else
             str += s[x];
             return str;
+        }
+        public static string NumberToString(int num)
+        {
+            return num.ToString();
         }
     }
 }
