@@ -97,5 +97,18 @@ namespace CodeWars
       }
       return 0;
     }
+        //funkcja odwracajaca stringa str podanego jako parametr oraz zwracajaca wynik odwrocenia pod zmienna reverse
+        public static class Kata
+{
+  public static string Solution(string str)
+    {
+      var reverse = "";
+      for (int i=str.Length-1;i>=0;i--)
+      {
+       reverse +=str[i];
+      }
+      return reverse;
+      throw new NotImplementedException("TODO: Kata.Solution(string) => string");
+    }
     }
 }
