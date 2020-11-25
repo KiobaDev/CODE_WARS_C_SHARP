@@ -73,5 +73,29 @@ namespace CodeWars
             }
             return no;
         }
+        //funkcja dzialajaca jak podstawowy kalkulator - wybor dzialania jest dokonywany przez parametr "operation"
+        public static double basicOp(char operation, double value1, double value2)
+    {
+     switch(operation)
+     {
+       case '+':
+         {
+          return value1+value2;
+         }
+        case '-':
+         {
+          return value1-value2;
+         }
+        case '*':
+         {
+          return value1*value2;
+         }
+        case '/':
+         {
+          return value1/value2;
+         }
+      }
+      return 0;
+    }
     }
 }
