@@ -19,12 +19,21 @@ namespace CodeWars
                 return str;
             }
             else
-            str += s[x];
+                str += s[x];
             return str;
         }
         public static string NumberToString(int num)
         {
             return num.ToString();
+        }
+        public static string boolToWord(bool word)
+        {
+            if (word == true)
+            {
+                return "Yes";
+            }
+            else
+                return "No";
         }
     }
 }
