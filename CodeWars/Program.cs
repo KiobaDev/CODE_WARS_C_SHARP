@@ -38,19 +38,23 @@ namespace CodeWars
             else
                 return "No";
         }
-        //Funkcja sprawdzajaca czy z podanych parametrow mozliwe jest zbudowanie trojakta jesli tak zwraca true
+        //Funkcja sprawdzajaca czy z podanych parametrow mozliwe jest zbudowanie trojakta jesli tak zwraca true w przeciwnym wypadku false
         public static bool IsTriangle(int a, int b, int c)
         {
             var half = (a + b + c) / 2;
             var square = Math.Sqrt(half * (half - a) * (half - b) * (half - c));
-            if (a+b>c|| a+c>b || b+c>a && square > 0)
-            {
-                return true;
-            }
-            else
+            if(square<=0)
             {
                 return false;
             }
-      }
+            else if(a+b<c || a+c<b || b + c < a)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
