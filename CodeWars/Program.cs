@@ -110,5 +110,23 @@ namespace CodeWars
       return reverse;
       throw new NotImplementedException("TODO: Kata.Solution(string) => string");
     }
+            // funkcja zwracajaca sume liczb z przedzialu podanego jako parametr od = 0 do 
+            //podanej liczby jesli podano 0 zwracana wartosc to 0 przykladowo summation(8) zwraca wartosc 36
+             public static int summation(int num)
+        {
+            var number = 0;
+            if (num > 0)
+            {
+                for (int i = 0; i <= num; i++)
+                {
+                    number += i;
+                }
+                return number;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
