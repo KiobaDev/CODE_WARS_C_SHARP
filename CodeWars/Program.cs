@@ -128,5 +128,22 @@ namespace CodeWars
                 return 0;
             }
         }
+            //funkcja sprawdzajaca czy suma elementow tablicy jest parzysta lub nieparzysta
+            public static string OddOrEven(int[] array)
+        {
+            var sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            if (sum % 2 == 0)
+            {
+                return "even";
+            }
+            else
+            {
+                return "odd";
+            }
+        }
     }
 }
