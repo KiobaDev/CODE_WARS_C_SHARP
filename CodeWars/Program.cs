@@ -145,5 +145,11 @@ namespace CodeWars
                 return "odd";
             }
         }
+            //funkcja convertuje sume parametrow a i b na kod binarny
+            public static string AddBinary(int a, int b)
+  {
+      var sum = Convert.ToString(a+b,2);
+    return sum;
+  }
     }
 }
