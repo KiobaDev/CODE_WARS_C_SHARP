@@ -203,4 +203,36 @@ namespace CodeWars
             }
             return counter;
         }
+        // funkcja symulujaca prosty kalkulator przyjmujaca 2 liczby typu double oraz 
+        //stringa op ktory wskazuje na operacje jaka ma wykonac funkcja (dodawanie odejmowanie mnozenie dzielenie)
+        public static double Arithmetic(double a, double b, string op)
+        {
+            if (a > 0 && b > 0)
+            {
+                switch (op)
+                {
+                    case "add":
+                        {
+                            return a + b;
+                        }
+                    case "subtract":
+                        {
+                            return a - b;
+                        }
+                    case "multiply":
+                        {
+                            return a * b;
+                        }
+                    case "divide":
+                        {
+                            return a / b;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+            }
+            return 0;
+        }
 }
