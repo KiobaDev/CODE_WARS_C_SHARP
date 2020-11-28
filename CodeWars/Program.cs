@@ -235,4 +235,27 @@ namespace CodeWars
             }
             return 0;
         }
+        //funkcja sumuje wartosc d poszczegolnych liter a=1, b=2 .... z=26 opiera swoje dzialanie na kodzie ascii 
+        public static int WordsToMarks(string str)
+        {
+            var sum = 0;
+            int letter = 97;
+            if (str != null)
+            {
+                for (int i = 0; i < str.Length; i++)
+                {
+                    letter = 97;
+                    for (int j = 0; j < 27; j++)
+                    {
+                        if ((int)str[i] == letter)
+                        {
+                            sum += letter - 96;
+                        }
+                        letter++;
+                    }
+                }
+                return sum;
+            }
+            throw new NotImplementedException();
+        }
 }
