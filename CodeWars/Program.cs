@@ -258,4 +258,28 @@ namespace CodeWars
             }
             throw new NotImplementedException();
         }
+        //funkcja sprawdzajaca czy w podanym wyrazie jako parametr wystepuje taka sama ilosc "x" oraz "o" jesli tak 
+        //zwraca true (gdy nie wystepuje ani razu tez) w przeciwnym razie false
+        public static bool XO(string input)
+        {
+            var o = 0;
+            var x = 0;
+
+            for(int i=0;i<input.Length;i++)
+            {
+                if(input[i]=='o' || input[i]=='O')
+                {
+                    o++;
+                }
+                if (input[i] == 'x' || input[i]=='X')
+                {
+                    x++;
+                }
+            }
+            if(o==x || (x==0 && o==0))
+            {
+                return true;
+            }
+        return false;
+        }
 }
