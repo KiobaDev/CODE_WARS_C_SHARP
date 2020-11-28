@@ -190,4 +190,17 @@ namespace CodeWars
             var l = numbers.Length-1;
             return numbers[l] + numbers[l - 1];
         }
+        //zwraca liczbe dzielnikow liczy podanej jako parametr funkcji
+        public static int Divisors(int n)
+        {
+            int counter = 0;
+            for(int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    counter++;
+                }
+            }
+            return counter;
+        }
 }
