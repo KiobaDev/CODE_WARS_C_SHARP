@@ -282,4 +282,25 @@ namespace CodeWars
             }
         return false;
         }
+        // funkcja zaokragla wartosc n do 5 np. 
+        // TestCase(7, ExpectedResult=10)
+        // TestCase(-1, ExpectedResult=0)
+         public static int RoundToNext5(int n)
+        {
+            if (n % 5 == 0)
+            {
+                return n;
+            }
+            if (n > 0)
+            {
+                var rest = n % 5;
+                return n + (5 - rest);
+            }
+            if (n < 0)
+            {
+                var rest = n % 5;
+                return n - rest;
+            }
+            return 0;
+        }
 }
