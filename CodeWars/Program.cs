@@ -182,4 +182,12 @@ namespace CodeWars
             }
             return rev;
         }
+        // funkcja sumuje 2 najmniejsze liczby w tablicy i zwraca ich wartosc
+         public static int sumTwoSmallestNumbers(int[] numbers)
+        {
+            Array.Sort(numbers);
+            Array.Reverse(numbers);
+            var l = numbers.Length-1;
+            return numbers[l] + numbers[l - 1];
+        }
 }
