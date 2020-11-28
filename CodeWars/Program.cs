@@ -313,4 +313,24 @@ namespace CodeWars
     }
   return repeat;
   }
+        //funkcja zwraca napis pomijajac wszystkie znaki po '#' w podanym porametrze jezeli nie wystepuje '#' zwraca calego stringa
+        public static string RemoveUrlAnchor(string url)
+        {
+            string new_string = "";
+            var counter = -1;
+            var last = url.LastIndexOf(url);
+            for (int i = 0; i < url.Length - 1; i++)
+            {
+                counter++;
+                if (url[i] == '#')
+                {
+                    new_string = url.Substring(0, counter);
+                }
+            }
+            if (new_string == string.Empty)
+            {
+                return url;
+            }
+            return new_string;
+        }
 }
