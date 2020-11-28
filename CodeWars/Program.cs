@@ -169,4 +169,18 @@ namespace CodeWars
             }
             return array;
         }
+        //funkcja odwracajaca stringa z pominieciem znakow ktore nie znajduja siew alfabecie
+        public string ReverseLetter(string str)
+        {
+            str.Reverse();
+            var rev = "";
+            for(int i = str.Length-1; i >= 0; i--)
+            {
+                if(str[i]>='a' && str[i] <= 'z')
+                {
+                    rev += str[i];
+                }
+            }
+            return rev;
+        }
 }
