@@ -303,4 +303,14 @@ namespace CodeWars
             }
             return 0;
         }
+      //funkcja powtarzajaca napis podany jako parametr s podana ilosc razy (parametr n) 
+         public static string Repeater(string s, int n)
+  {
+    var repeat="";
+    for(int i=0;i<n;i++)
+    {
+      repeat+=s;
+    }
+  return repeat;
+  }
 }
