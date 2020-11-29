@@ -333,4 +333,69 @@ namespace CodeWars
             }
             return new_string;
         }
+        //funkcja sumujaca litery ktore "naleza" do lewej strony lub prawej nastepnie 
+        //zachodzi sprawdzenie ktora strona wygrala lewa lub prawa oraz czy wystapil remis 
+        public static string AlphabetWar(string fight)
+        {
+            var left = 0;
+            var right = 0;
+            for (int i = 0; i < fight.Length; i++)
+            {
+                switch (fight[i])
+                {
+                    case 'w':
+                        {
+                            left += 4;
+                            break;
+                        }
+                    case 'p':
+                        {
+                            left += 3;
+                            break;
+                        }
+                    case 'b':
+                        {
+                            left += 2;
+                            break;
+                        }
+                    case 's':
+                        {
+                            left += 1;
+                            break;
+                        }
+                    case 'm':
+                        {
+                            right += 4;
+                            break;
+                        }
+                    case 'q':
+                        {
+                            right += 3;
+                            break;
+                        }
+                    case 'd':
+                        {
+                            right += 2;
+                            break;
+                        }
+                    case 'z':
+                        {
+                            right += 1;
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+            }
+            if (left > right)
+            {
+                return "Left side wins!";
+            }
+            else if (right > left){
+                return "Right side wins!";
+            }
+            return "Let's fight again!";
+        }
 }
