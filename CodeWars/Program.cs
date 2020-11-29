@@ -457,4 +457,25 @@ namespace CodeWars
             }
             return false;
         }
+        //funkcja znajduje w tablicy liczbe wystepujaca nieparzysta liczbe razy (zawsze jest to 1 cyfra) oraz ja zwraca
+        public static int find_it(int[] seq)
+        {
+            var counter = 0;
+            foreach(var item in seq)
+            {
+                counter = 0;
+                for(int i=0;i<seq.Length;i++)
+                {
+                    if(seq[i]==item)
+                    {
+                        counter++;
+                    }
+                }
+               if(counter%2==1)
+                {
+                    return item;
+                }
+            }
+            return -1;
+        }
 }
