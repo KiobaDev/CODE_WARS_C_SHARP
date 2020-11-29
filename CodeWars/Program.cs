@@ -8,7 +8,7 @@ namespace CodeWars
         {
             Console.WriteLine(GetMiddle("kubaa"));
         }
-        //funkcja wypisujaca srodkowa litere wyrazu
+        //metoda wypisujaca srodkowa litere wyrazu
         public static string GetMiddle(string s)
         {
             int x = s.Length / 2;
@@ -23,12 +23,12 @@ namespace CodeWars
                 str += s[x];
             return str;
         }
-        //funkcja konwertujaca inta do stringa
+        //metoda konwertujaca inta do stringa
         public static string NumberToString(int num)
         {
             return num.ToString();
         }
-        // funkcja wypisujaca "Yes" dla parametru word == true w przeciwnym razie wypisuje "No" dla false
+        //metoda wypisujaca "Yes" dla parametru word == true w przeciwnym razie wypisuje "No" dla false
         public static string boolToWord(bool word)
         {
             if (word == true)
@@ -38,7 +38,7 @@ namespace CodeWars
             else
                 return "No";
         }
-        //Funkcja sprawdzajaca czy z podanych parametrow mozliwe jest zbudowanie trojakta jesli tak zwraca true w przeciwnym wypadku false
+        //metoda sprawdzajaca czy z podanych parametrow mozliwe jest zbudowanie trojakta jesli tak zwraca true w przeciwnym wypadku false
         public static bool IsTriangle(int a, int b, int c)
         {
             var half = (a + b + c) / 2;
@@ -56,7 +56,7 @@ namespace CodeWars
                 return true;
             }
         }
-        //funkcja wypisujaca napis "Found the needle at position" oraz index w tablicy danego napisu 
+        //metoda wypisujaca napis "Found the needle at position" oraz index w tablicy danego napisu 
         public static string FindNeedle(object[] haystack)
         {
             string no="empty";
@@ -73,7 +73,7 @@ namespace CodeWars
             }
             return no;
         }
-        //funkcja dzialajaca jak podstawowy kalkulator - wybor dzialania jest dokonywany przez parametr "operation"
+        //metoda dzialajaca jak podstawowy kalkulator - wybor dzialania jest dokonywany przez parametr "operation"
         public static double basicOp(char operation, double value1, double value2)
     {
      switch(operation)
@@ -97,7 +97,7 @@ namespace CodeWars
       }
       return 0;
     }
-        //funkcja odwracajaca stringa str podanego jako parametr oraz zwracajaca wynik odwrocenia pod zmienna reverse
+        //metoda odwracajaca stringa str podanego jako parametr oraz zwracajaca wynik odwrocenia pod zmienna reverse
         public static class Kata
 {
   public static string Solution(string str)
@@ -110,7 +110,7 @@ namespace CodeWars
       return reverse;
       throw new NotImplementedException("TODO: Kata.Solution(string) => string");
     }
-            // funkcja zwracajaca sume liczb z przedzialu podanego jako parametr od = 0 do 
+            // metoda zwracajaca sume liczb z przedzialu podanego jako parametr od = 0 do 
             //podanej liczby jesli podano 0 zwracana wartosc to 0 przykladowo summation(8) zwraca wartosc 36
              public static int summation(int num)
         {
@@ -128,7 +128,7 @@ namespace CodeWars
                 return 0;
             }
         }
-            //funkcja sprawdzajaca czy suma elementow tablicy jest parzysta lub nieparzysta
+            //metoda sprawdzajaca czy suma elementow tablicy jest parzysta lub nieparzysta
             public static string OddOrEven(int[] array)
         {
             var sum = 0;
@@ -145,14 +145,14 @@ namespace CodeWars
                 return "odd";
             }
         }
-            //funkcja convertuje sume parametrow a i b na kod binarny
+            //metoda konwertuje sume parametrow a i b na kod binarny
             public static string AddBinary(int a, int b)
   {
       var sum = Convert.ToString(a+b,2);
     return sum;
   }
     }
-        //funkcja sortujaca elementy tablicy (wyrazy) po ich dlugosci 
+        //metoda sortujaca elementy tablicy (wyrazy) po ich dlugosci 
         public static string[] SortByLength(string[] array)
         {
             for(int i=0;i<=array.Length;i++)
@@ -169,7 +169,7 @@ namespace CodeWars
             }
             return array;
         }
-        //funkcja odwracajaca stringa z pominieciem znakow ktore nie znajduja siew alfabecie
+        //metoda odwracajaca stringa z pominieciem znakow ktore nie znajduja siew alfabecie
         public string ReverseLetter(string str)
         {
             var rev = "";
@@ -182,7 +182,7 @@ namespace CodeWars
             }
             return rev;
         }
-        // funkcja sumuje 2 najmniejsze liczby w tablicy i zwraca ich wartosc
+        //metoda sumuje 2 najmniejsze liczby w tablicy i zwraca ich wartosc
          public static int sumTwoSmallestNumbers(int[] numbers)
         {
             Array.Sort(numbers);
@@ -190,7 +190,7 @@ namespace CodeWars
             var l = numbers.Length-1;
             return numbers[l] + numbers[l - 1];
         }
-        //zwraca liczbe dzielnikow liczy podanej jako parametr funkcji
+        //metoda zwraca liczbe dzielnikow liczy podanej jako parametr funkcji
         public static int Divisors(int n)
         {
             int counter = 0;
@@ -203,7 +203,7 @@ namespace CodeWars
             }
             return counter;
         }
-        // funkcja symulujaca prosty kalkulator przyjmujaca 2 liczby typu double oraz 
+        //metoda symulujaca prosty kalkulator przyjmujaca 2 liczby typu double oraz 
         //stringa op ktory wskazuje na operacje jaka ma wykonac funkcja (dodawanie odejmowanie mnozenie dzielenie)
         public static double Arithmetic(double a, double b, string op)
         {
@@ -235,7 +235,7 @@ namespace CodeWars
             }
             return 0;
         }
-        //funkcja sumuje wartosc d poszczegolnych liter a=1, b=2 .... z=26 opiera swoje dzialanie na kodzie ascii 
+        //metoda sumuje wartosc d poszczegolnych liter a=1, b=2 .... z=26 opiera swoje dzialanie na kodzie ascii 
         public static int WordsToMarks(string str)
         {
             var sum = 0;
@@ -258,7 +258,7 @@ namespace CodeWars
             }
             throw new NotImplementedException();
         }
-        //funkcja sprawdzajaca czy w podanym wyrazie jako parametr wystepuje taka sama ilosc "x" oraz "o" jesli tak 
+        //metoda sprawdzajaca czy w podanym wyrazie jako parametr wystepuje taka sama ilosc "x" oraz "o" jesli tak 
         //zwraca true (gdy nie wystepuje ani razu tez) w przeciwnym razie false
         public static bool XO(string input)
         {
@@ -282,7 +282,7 @@ namespace CodeWars
             }
         return false;
         }
-        // funkcja zaokragla wartosc n do 5 np. 
+        // metoda zaokragla wartosc n do 5 np. 
         // TestCase(7, ExpectedResult=10)
         // TestCase(-1, ExpectedResult=0)
          public static int RoundToNext5(int n)
@@ -303,7 +303,7 @@ namespace CodeWars
             }
             return 0;
         }
-      //funkcja powtarzajaca napis podany jako parametr s podana ilosc razy (parametr n) 
+      //metoda powtarzajaca napis podany jako parametr s podana ilosc razy (parametr n) 
          public static string Repeater(string s, int n)
   {
     var repeat="";
@@ -313,7 +313,7 @@ namespace CodeWars
     }
   return repeat;
   }
-        //funkcja zwraca napis pomijajac wszystkie znaki po '#' w podanym porametrze jezeli nie wystepuje '#' zwraca calego stringa
+        //metoda zwraca napis pomijajac wszystkie znaki po '#' w podanym porametrze jezeli nie wystepuje '#' zwraca calego stringa
         public static string RemoveUrlAnchor(string url)
         {
             string new_string = "";
@@ -333,7 +333,7 @@ namespace CodeWars
             }
             return new_string;
         }
-        //funkcja sumujaca litery ktore "naleza" do lewej strony lub prawej nastepnie 
+        //metoda sumujaca litery ktore "naleza" do lewej strony lub prawej nastepnie 
         //zachodzi sprawdzenie ktora strona wygrala lewa lub prawa oraz czy wystapil remis 
         public static string AlphabetWar(string fight)
         {
@@ -398,7 +398,7 @@ namespace CodeWars
             }
             return "Let's fight again!";
         }
-        //funkcja zwracajaca pozycje liter w parametrze ktore sa duza litera alfabetu
+        //metoda zwracajaca pozycje liter w parametrze ktore sa duza litera alfabetu
         public static int[] Capitals(string word)
         {
            List<int> tab = new List<int>();
@@ -411,7 +411,7 @@ namespace CodeWars
             }
             return tab.ToArray();
         }
-        //funkcja zwracajaca ciag znakow w postaci np. A-Bb-Ccc... kazda litera 
+        //metoda zwracajaca ciag znakow w postaci np. A-Bb-Ccc... kazda litera 
         //jest wypisana o 1 wiecej niz poprzednai w stringu oraz gdy wystepuje 1 raz jest napisana z duzej litery gdy nastepuje zmiana litery zostaje dodany znak "-"
         public static String Accum(string s)
         {
@@ -438,7 +438,7 @@ namespace CodeWars
             }
             return word.ToString();
         }
-        //
+        //metoda
         public static bool PowerOfTwo(int n)
         {   
             var x = 0;
@@ -457,7 +457,7 @@ namespace CodeWars
             }
             return false;
         }
-        //funkcja znajduje w tablicy liczbe wystepujaca nieparzysta liczbe razy (zawsze jest to 1 cyfra) oraz ja zwraca
+        //metoda znajduje w tablicy liczbe wystepujaca nieparzysta liczbe razy (zawsze jest to 1 cyfra) oraz ja zwraca
         public static int find_it(int[] seq)
         {
             var counter = 0;
