@@ -489,4 +489,22 @@ namespace CodeWars
             var emp = Array.Empty<int>();
             return emp;
         }
+//metoda usuwajaca ze stringa znaki inne niz (a-z oraz A-Z) po kazdym usunieciu takiego znaku nastepny znak to duza litera.
+public static string ToCamelCase(string str)
+        {
+            var newstr = "";
+            for(int i=0;i<str.Length;i++)
+            {
+                if(str[i]>64 &&str[i]<91 || str[i] > 96 && str[i] < 123)
+                {
+                    newstr += str[i];
+                }
+                else
+                {
+                    newstr+=str[i + 1].ToString().ToUpper();
+                    i++;
+                }
+            }
+            return newstr;
+        }
 }
