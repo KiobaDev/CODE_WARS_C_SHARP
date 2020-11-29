@@ -398,4 +398,17 @@ namespace CodeWars
             }
             return "Let's fight again!";
         }
+        //funkcja zwracajaca pozycje liter w parametrze ktore sa duza litera alfabetu
+        public static int[] Capitals(string word)
+        {
+           List<int> tab = new List<int>();
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] > 64 && word[i] < 91)
+                {
+                    tab.Add(i);
+                }
+            }
+            return tab.ToArray();
+        }
 }
