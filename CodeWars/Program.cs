@@ -411,4 +411,31 @@ namespace CodeWars
             }
             return tab.ToArray();
         }
+        //funkcja zwracajaca ciag znakow w postaci np. A-Bb-Ccc... kazda litera 
+        //jest wypisana o 1 wiecej niz poprzednai w stringu oraz gdy wystepuje 1 raz jest napisana z duzej litery gdy nastepuje zmiana litery zostaje dodany znak "-"
+        public static String Accum(string s)
+        {
+            int counter = -1;
+            var word = "";
+            for (int i = 0; i < s.Length; i++)
+            {               
+                counter++;
+                for (int j = 0; j <=counter; j++)
+                {
+                    if (j==0)
+                    {
+                        word += s[i].ToString().ToUpper();
+                    }
+                    else if(s[i]!=counter)
+                    {
+                        word += s[i].ToString().ToLower();
+                    }
+                }
+                if (i != s.Length-1)
+                {
+                    word += "-";
+                }
+            }
+            return word.ToString();
+        }
 }
