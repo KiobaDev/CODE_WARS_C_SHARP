@@ -478,4 +478,15 @@ namespace CodeWars
             }
             return -1;
         }
+        //metoda sortujaca liczby w tablicy jesli tablica jest pusta zwraca pusta tablice
+        public static int[] SortNumbers(int[] nums)
+        {
+            if (nums != null)
+            {
+                Array.Sort(nums);
+                return nums;
+            }
+            var emp = Array.Empty<int>();
+            return emp;
+        }
 }
