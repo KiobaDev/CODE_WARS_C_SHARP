@@ -438,4 +438,23 @@ namespace CodeWars
             }
             return word.ToString();
         }
+        //
+        public static bool PowerOfTwo(int n)
+        {   
+            var x = 0;
+            var y=2;
+             if(n==0)
+             {
+               return false;
+             }
+            for(int i =0;i<=y;i++)
+            {   y*=2;
+                x++;
+                if (n % Math.Pow(2, x) == 0 || n==1)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 }
