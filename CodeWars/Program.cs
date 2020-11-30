@@ -508,3 +508,25 @@ public static string ToCamelCase(string str)
             return newstr;
         }
 }
+    //metoda sprawdzajaca czy spacer zakonczy sie w miejscu wyjscia litery n s w e reprezentuja 
+    //kierunki kazda iteracja to 1 krok w danym kierunku spacer ma zajac 10 minut kazda iteracja pojedynczego kierunku to 1 minuta
+    public static bool IsValidWalk(string[] walk)
+        {
+            if (walk.Length ==10)
+            {
+                var n = walk.Count(x => x.Contains("n"));
+                var s = walk.Count(x => x.Contains("s"));
+                var w = walk.Count(x => x.Contains("w"));
+                var e = walk.Count(x => x.Contains("e"));
+
+                if (n != s || w !=e)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+              return false;
+            }
+            return true;
+        }
