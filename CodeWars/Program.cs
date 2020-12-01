@@ -530,3 +530,27 @@ public static string ToCamelCase(string str)
             }
             return true;
         }
+    //metoda zamieniajaca litery z parametru na liczby wedlug zasady a=1,b=2 ...  jesli wprowadzona jest duza litera posiada ta sama wartosc co mala 
+    // metoda zwraca nowy lancuch na zasadzie "1 15 12 5 3 2 1"
+    public static string AlphabetPosition(string text)
+        {
+            string alphabetSmall = "abcdefghijklmnopqrstuvwxyz";
+            string alphabetBig = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+            string newstr = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                for (int j = 0; j <= alphabetSmall.Length - 1; j++)
+                {
+                    if (text[i] == alphabetSmall[j] || text[i] == alphabetBig[j])
+                    {
+                        newstr += j + 1 + " ";
+                    }
+                }
+            }
+            text = "";
+            for (int x = 0; x < newstr.Length - 1; x++)
+            {
+                text += newstr[x]; 
+            }
+            return text;
+        }
