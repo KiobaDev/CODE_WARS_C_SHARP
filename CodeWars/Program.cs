@@ -554,3 +554,24 @@ public static string ToCamelCase(string str)
             }
             return text;
         }
+    //metoda ktora sortuje w tablicy liczby ktore sa nieparzyste rosnaco natomiast gdy w tablicy 
+    //jest liczba parzysta zostawia ja bez zmiany metoda zwraca nowa posortowana tablice 
+    public static int[] SortArray(int[] array)
+        {
+            var z = 0;
+            int[] tab=new int [array.Length];
+            var x = array.Where(q => q % 2 == 1).OrderBy(y => y).ToArray();
+            for (int i = 0; i < array.Length; i++)
+            {
+                if(array[i]%2==0)
+                {
+                    tab[i] = array[i];
+                }
+                else
+                {
+                    tab[i] = x[z];
+                    z++;
+                }
+            }
+            return tab;
+        }
