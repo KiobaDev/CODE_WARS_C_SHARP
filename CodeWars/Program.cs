@@ -577,19 +577,36 @@ namespace CodeWars
     }
     //metoda dodajaca do 1 do liczby tworzonej przez poszczegolne elementy tablicy np dla 239 zostaje zwrocona wartosc 240 a dla 240 zwrocono 241
     public static int[] UpArray(int[] num)
-    {
-        for (int i = num.Length - 1; i >= 0; i--)
         {
-            if (i == num.Length - 1 && num[i] < 9)
+            if(num[i==9])
+            if (num.Count() == 0)
             {
-                num[i] += 1;
+                return null;
             }
-            else if (num[i] == 9)
+            for (int i = num.Length - 1; i >= 0; i--)
             {
-                num[i] = 0;
-                num[i - 1] += 1;
+                if (num.Sum() == 0)
+                {
+                    num[0]+=1;
+                }
+                    if (num[i] > 9)
+                {
+                    return null;
+                }
+                if (i == num.Length - 1 && num[i] < 9 && num[i] >= 0)
+                {
+                    num[i] += 1;
+                }
+                else if (num[i] == 9 && i > 0)
+                {
+                    num[i] = 0;
+                    num[i - 1] += 1;
+                }
+                else if (num[i] < 0)
+                {
+                    return null;
+                }
             }
+            return num;
         }
-        return num;
-    }
 }
