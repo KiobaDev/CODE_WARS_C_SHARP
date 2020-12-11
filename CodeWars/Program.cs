@@ -614,6 +614,10 @@ namespace CodeWars
         {
             int result = 0;
             var x = from a in n select Math.Pow(a,2);
-                    return result;
+               foreach(var item in x)
+                {
+                result += (int)item;
+                }      
+          return result;
         }
 }
