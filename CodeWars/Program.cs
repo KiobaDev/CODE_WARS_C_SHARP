@@ -110,6 +110,11 @@ namespace CodeWars
                 return reverse;
                 throw new NotImplementedException("TODO: Kata.Solution(string) => string");
             }
+            //druga wersja uzywajaca LINQ
+            public static string Solution(string str)
+            {
+              return new string(str.Reverse().ToArray());
+            }
             // metoda zwracajaca sume liczb z przedzialu podanego jako parametr od = 0 do 
             //podanej liczby jesli podano 0 zwracana wartosc to 0 przykladowo summation(8) zwraca wartosc 36
             public static int summation(int num)
