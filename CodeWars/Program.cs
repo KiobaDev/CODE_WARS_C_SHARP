@@ -609,4 +609,11 @@ namespace CodeWars
             }
             return num;
         }
+        //metoda zwracajaca sume kwadratu wszystkich elementow tablicy
+         public static int SquareSum(int[] n)
+        {
+            int result = 0;
+            var x = from a in n select Math.Pow(a,2);
+                    return result;
+        }
 }
