@@ -625,4 +625,25 @@ namespace CodeWars
                 }      
           return result;
         }
+        //metoda ustawiajaca wszystkie 0 na koncu tablicy a inne liczby/cyfry pozostawia na swoich miejscach bez zmian [5kyu]
+        public static int[] MoveZeroes(int[] arr)
+        {
+            var i = 0;
+            int[] newarr = new int[arr.Length];
+            var x = from a in arr where a == 0 orderby a descending select a;
+            foreach(var item in arr)
+            {
+                if (item != 0)
+                {
+                    newarr[i] = item;
+                    i++;
+                }
+            }
+            foreach (var item in x)
+            {
+                newarr[i] = item;
+                i++;
+            }
+            return newarr;
+        }
 }
