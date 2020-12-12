@@ -655,4 +655,14 @@ namespace CodeWars
             }
             return input;
         }
+        //metoda sprawdzajaca czy wszystkie litery 2 parametru znajduja sie w 1 jesli tak zwraca true inaczej falase [5kyu]
+        public static bool Scramble(string str1, string str2)
+        {
+            var result = str2.Where(x => str1.Contains(x));
+            if (result.Count() == str2.Length)
+            {
+                return true;
+            }
+            return false;
+        }
 }
