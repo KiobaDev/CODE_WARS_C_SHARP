@@ -695,4 +695,60 @@ namespace CodeWars
             }
             return str;
         }
+        //metoda konwertujaca sekundy na format HH:MM:SS (godziny:minuty:sekundy) gdzie mas=ksymalna godzina moze byc 99:59:59 (5 kyu - do pozniejszej refaktoryzacji)
+        public static string GetReadableTime(int seconds)
+        {
+            if(seconds<= 359999)
+            {
+                int tmp = 0;
+                string newStr = "";
+                //HOURS
+                while (seconds / 3600 != 0)
+                {
+                    seconds -= 3600;
+                    tmp++;
+
+                }
+                if (tmp < 10)
+                {
+                    newStr += "0" + tmp + ":";
+                }
+                else
+                {
+                    newStr += (tmp) + ":";
+                }
+                tmp = 0;
+                    //MINUTES
+                    while (seconds / 60 != 0)
+                    {
+                        seconds -= 60;
+                        tmp++;
+                    }
+                    if (tmp < 10)
+                    {
+                         newStr += "0" + tmp + ":";
+                    }
+                    else
+                    {
+                        newStr += (tmp) + ":";
+                    }
+                    tmp = 0;
+                        //SECOUND
+                        while (seconds / 1 != 0)
+                        {
+                            seconds -= 1;
+                            tmp++;
+                        }
+                        if (tmp < 10)
+                        {
+                            newStr += "0" + tmp;
+                        }
+                        else
+                        {
+                            newStr += (tmp) + ":";
+                        }
+            return newStr;
+            }
+            return null;
+        }
 }
