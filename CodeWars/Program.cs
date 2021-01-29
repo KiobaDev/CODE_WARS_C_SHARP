@@ -871,4 +871,24 @@ public class SumDigPower {
         }
         return result;
     }
+        //zadanie rekrutacyjne znalezione na jednej z grup FB Opis: funkcja ma wypisac na ekran kat pomiedzy wskazowka godzinowa a minutowa w zegarze
+        public static void angle()
+        {
+            Console.WriteLine("Type a hour");
+            string _hour = Console.ReadLine();
+            int hour;
+            Console.WriteLine("Type a minute");
+            string _minute = Console.ReadLine();
+            int minute;
+            bool isTrueMinute = int.TryParse(_minute, out minute);
+            bool isTrueHour = int.TryParse(_hour, out hour);
+            if (isTrueHour==true && hour <= 12 && isTrueMinute==true && minute <= 59 && minute>0 && hour>0)
+            {
+                Console.WriteLine("Angle equals: " + ((hour*60) - minute));
+            }
+            else
+            {
+                Console.WriteLine("Inncorect HOUR/MINUTE!");
+            }
+        }
 }
