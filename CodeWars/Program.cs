@@ -779,4 +779,52 @@ namespace CodeWars
         return res;
     }
 }
+    //Alphabet war - Wo lo loooooo priests join the war - nazwa zadania -> czytaj wiecej na codewars.com
+    // metoda sprawdzajaca ktora strona (lewa czy prawa) wygrywa litery i ich wartosci : lewe  w - 4 p - 3 b - 2s - 1  t - 0 (but it's priest with Wo lo loooooooo power) 
+    //prawa:  m - 4 q - 3  d - 2 z - 1 j - 0 (but it's priest with Wo lo loooooooo power)
+  public static string AlphabetWar(string fight)
+    {
+        string power = "wpbs_zdqm";
+        fight = new Regex(@"(?<!t)[wpbs](?=j)|(?<=j)[wpbs](?!t)|(?<!j)[zdqm](?=t)|(?<=t)[zdqm](?!j)").Replace(fight, x => ""+ power[8 - power.IndexOf(x.Value)]);
+        int result = fight.Aggregate(0, (a, b) => a + (power.IndexOf(b) == -1 ? 0 : power.IndexOf(b) - 4)); //
+        return result == 0 ? "Let's fight again!" : $"{(result < 0 ? "Left":"Right")} side wins!";
+    }
+//
+public class SumDigPower {
+
+    public static long[] SumDigPow(long a, long b)
+    {
+        List<long> values = new List<long>();
+        for (long x = a; x <= b; x++)
+        {
+          if (x.ToString().Select((c, i) => Math.Pow(Char.GetNumericValue(c), i + 1)).Sum() == x)
+            values.Add(x);
+        }
+        return values.ToArray();
+    }
+}
+    //metoda zwracaja pierwszy najdluzszy lancuch skladajacy sie z k kolejnych ciagow w tablicy 
+    public class LongestConsecutives {
+    public static string LongestConsec(string[] s, int k){
+        return s.Length==0||s.Length<k||k<=0 ? ""
+             : Enumerable.Range(0,s.Length-k+1)
+                         .Select(x=>string.Join("",s.Skip(x).Take(k)))
+                         .OrderByDescending(x=>x.Length)
+                         .First();
+    }
+        public static class Kata
+{
+  //metoda symulujaca dzialanie systemu lajkowania na Facebooku
+  public static string Likes(string[] names)
+  {
+    switch (names.Length)
+    {
+      case 0: return "no one likes this"; // :(
+      case 1: return $"{names[0]} likes this";
+      case 2: return $"{names[0]} and {names[1]} like this";
+      case 3: return $"{names[0]}, {names[1]} and {names[2]} like this";
+      default: return $"{names[0]}, {names[1]} and {names.Length - 2} others like this";
+    }
+  }
+}
 }
