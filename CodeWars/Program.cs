@@ -766,4 +766,17 @@ namespace CodeWars
             }
             return years;
         }
+        //metoda znajdujaca maksymalny ciag ktory znajduje sie w podtablicy
+        public static int MaxSequence(int[] arr)
+    {
+        int max = 0, res = 0, sum = 0;
+        foreach(var item in arr)
+        {
+            sum += item;
+            max = sum > max ? max : sum;
+            res = res > sum - max ? res : sum - max;
+        }
+        return res;
+    }
+}
 }
