@@ -751,4 +751,19 @@ namespace CodeWars
             }
             return null;
         }
+        //metoda sprawdzajaca ile lat potrzeba do osiagniecia wskazanej populacji np w miescie 
+        //p0 - poczatkowa populacja percent - procent roczny nowych osob aug - liczba nowych/odchodzacych osob - p populacja ktora ma zostac osiagnieta
+        public static int NbYear(int p0, double percent, int aug, int p)
+        {
+            int years = 0;
+            double _p0 = Convert.ToDouble(p0);
+
+            while (_p0 < p)
+            {
+                _p0 += (int)(_p0 * percent / 100) + aug;
+                years++;
+                Console.WriteLine(years + "   " + _p0);
+            }
+            return years;
+        }
 }
