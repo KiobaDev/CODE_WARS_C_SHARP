@@ -733,7 +733,7 @@ namespace CodeWars
                         newStr += (tmp) + ":";
                     }
                     tmp = 0;
-                        //SECOUND
+                        //SECONDS
                         while (seconds / 1 != 0)
                         {
                             seconds -= 1;
