@@ -849,4 +849,26 @@ public class SumDigPower {
             }
             return resume;
         }
+        //
+        //metoda znajdujaca wszystkie księgi L z kodami należącymi do każdej kategorii M i zsumować ich ilość według każdej kategorii
+
+    public static string stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
+        if (lstOfArt.Length == 0) {
+            return "";
+        }
+        string result = "";
+        foreach (string m in lstOf1stLetter) {
+            int tot = 0;
+            foreach (string l in lstOfArt) {
+                if (l[0] == m[0]) {
+                    tot += int.Parse(l.Split(' ')[1]);
+                }
+            }
+            if (!String.IsNullOrEmpty(result)) {
+                result += " - ";
+            }
+            result += "(" + m + " : " + tot + ")";
+        }
+        return result;
+    }
 }
