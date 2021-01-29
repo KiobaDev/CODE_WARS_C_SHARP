@@ -665,4 +665,34 @@ namespace CodeWars
             }
             return false;
         }
+        //metoda dzielaca stringi po n-elementow np thisisstring -> dla n=4 zwraca this \n isst \n ring (dla ostatniego indeksu nie zachodzi dopisanie znaku nowej lini)
+        public static string StringBreakers(int n, string str)
+        {
+            string tmp = "";
+            for(int i = 0; i < str.Length; i++)
+            {
+                if (str[i] != ' ')
+                {
+                   tmp += str[i];
+                }
+            }
+            str = "";
+            for(int j = tmp.Length; j > 0; j -= n)
+            {
+                if (tmp.Length >= n)
+                {
+                    str += tmp.Substring(0, n);
+                    if (n != tmp.Length)
+                    {
+                        str += "\n";
+                        tmp = tmp.Remove(0, n);
+                    }
+                }
+                else
+                {
+                    str += tmp;
+                }
+            }
+            return str;
+        }
 }
