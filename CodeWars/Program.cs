@@ -827,4 +827,26 @@ public class SumDigPower {
     }
   }
 }
+        //metoda zwracajaca silnie podanej liczby w parametrze liczba musi byc wieksza od 0 ale mniejsza od 12
+        public static int Factorial(int n)
+        {
+            int resume = 1;
+            if (n < 0 || n > 12)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            while (n>=0)
+            {
+                if (n == 0)
+                {
+                    resume *= 1;
+                }
+                else
+                {
+                    resume *= n;
+                }
+                n--;
+            }
+            return resume;
+        }
 }
