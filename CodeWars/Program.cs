@@ -884,7 +884,7 @@ public class SumDigPower {
             bool isTrueHour = int.TryParse(_hour, out hour);
             if (isTrueHour==true && hour <= 12 && isTrueMinute==true && minute <= 59 && minute>0 && hour>0)
             {
-                Console.WriteLine("Angle equals: " + ((hour*60) - minute));
+                Console.WriteLine("Angle equals: " + ((hour*60)/2 - minute));
             }
             else
             {
