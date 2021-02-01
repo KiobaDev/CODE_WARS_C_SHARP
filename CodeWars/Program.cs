@@ -891,4 +891,28 @@ public class SumDigPower {
                 Console.WriteLine("Inncorect HOUR/MINUTE!");
             }
         }
+  //metoda zwracaja imie i nazwisko (jesli ktoras wartosc jest pusta lub tez ma wartosc null zwraca tylko druga)
+  private string firstName;
+  private string lastName;
+  public string FullName
+  {
+    get
+    {
+      if(string.IsNullOrEmpty(firstName))
+        {
+          return lastName;
+        }
+      if(string.IsNullOrEmpty(lastName))
+        {
+          return firstName;
+        }
+          return firstName+" "+lastName;
+    }
+  }
+  
+  public Dinglemouse(string firstName, string lastName)
+  {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 }
