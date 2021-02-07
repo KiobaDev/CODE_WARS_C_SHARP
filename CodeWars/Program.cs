@@ -974,4 +974,9 @@ public class SumDigPower {
             }
             return resultB - resultA;
         }
+        //metoda zamieniajaca inta na znak w kodzie ASCII
+        public static char GetChar(int charcode)
+  {
+    return (char)charcode;
+  }
 }
