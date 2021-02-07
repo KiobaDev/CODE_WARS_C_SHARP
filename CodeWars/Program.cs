@@ -936,4 +936,26 @@ public class SumDigPower {
             }
             return false;
         }
+       //metoda zwracajaca przypisana do przedzialu litere na podstawie sredniej z 3 liczb wszystkie liczby sa dodatnie i mniejsze badz rowne 100 
+          public static char GetGrade(int s1, int s2, int s3)
+        {
+            var score = (s1 + s2 + s3) / 3;
+            if(90 <= score && score <= 100)
+            {
+                return 'A';
+            }
+            else if (80 <= score && score < 90)
+            {
+                return 'B';
+            }
+            else if (70 <= score && score < 80)
+            {
+                return 'C';
+            }
+            else if (60 <= score && score < 70)
+            {
+                return 'D';
+            }
+            return 'F';
+        }
 }
