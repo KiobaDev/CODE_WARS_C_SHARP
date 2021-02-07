@@ -926,4 +926,14 @@ public class SumDigPower {
             string Hex = num.ToString("X");
             return Hex.ToLower();
         }
+        //metoda sprawdzajaca czy bohater zabral wystarczajaca liczbe pociskow aby zabic wszystkie atakujace smoki 
+        //(Kazdy smok wymaga 2 pociskow) jesli tak zwracana jest wartosc true w przeciwnym wypadku false 
+        public static bool Hero(int bullets, int dragons)
+        {
+            if (dragons * 2 <= bullets)
+            {
+                return true;
+            }
+            return false;
+        }
 }
