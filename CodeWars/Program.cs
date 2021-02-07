@@ -1020,4 +1020,17 @@ public class SumDigPower {
             }
                 return "Obese";
         }
+        //metoda zwracajaca sume wszystkich dodatnich liczb z tablicy
+        public static int PositiveSum(int[] arr)
+        {
+            var sum = 0;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 0)
+                {
+                    sum += arr[i];
+                }
+            }
+            return arr.Sum()-sum;
+        }
 }
