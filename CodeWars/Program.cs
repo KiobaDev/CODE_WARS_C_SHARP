@@ -988,4 +988,17 @@ public class SumDigPower {
             }
             return number-(number*2);
         }
+       //metoda sprawdzajaca czy zapisany string jest liczba jesli tak zwraca liczbe pomnozona przez 50 i zwiekszona o 6 w przeciwnym razie zwraca napis Erorr (gdy string to napis)
+        public static string Problem(String a)
+        {
+            double number;
+            bool isTrue = double.TryParse(a, out number);
+            var result = (isTrue) ? number * 50 + 6 : 0;
+
+            if (result == 0)
+            {
+                return "Error";
+            }
+            return result.ToString();
+        }
 }
