@@ -979,4 +979,13 @@ public class SumDigPower {
   {
     return (char)charcode;
   }
+        //metoda zwracajaca ujemny odpowiednik podanej liczby (jesli jest dodatnia w przeciwnym razie odrazu zwraca wartosc podana jako parametr)
+        public static int MakeNegative(int number)
+        {
+            if (number < 0)
+            {
+                return number; 
+            }
+            return number-(number*2);
+        }
 }
