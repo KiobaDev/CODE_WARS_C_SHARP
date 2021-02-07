@@ -958,4 +958,20 @@ public class SumDigPower {
             }
             return 'F';
         }
+        //metoda zwracajaca roznice wymnozonych przez siebie elementow tablic a i b 
+        public static int FindDifference(int[] a, int[] b)
+        {
+            int resultA = 1;
+            int resultB = 1;
+            for(int i = 0; i < a.Length; i++)
+            {
+                resultA *= a[i];
+                resultB *= b[i];
+            }
+            if (resultA > resultB)
+            {
+                return resultA - resultB;
+            }
+            return resultB - resultA;
+        }
 }
