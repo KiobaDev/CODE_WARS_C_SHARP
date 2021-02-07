@@ -915,4 +915,15 @@ public class SumDigPower {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+        //metoda konwertujaca parzyste liczby/cyfry na kod binarny - nieparzysta na kod hexadecymalny
+        public static string EvensAndOdds(int num)
+        {
+            if (num % 2 == 0)
+            {
+                var binary = Convert.ToString(num, 2);
+                return binary.ToLower();
+            }
+            string Hex = num.ToString("X");
+            return Hex.ToLower();
+        }
 }
