@@ -1118,4 +1118,9 @@ public static string Gordon(string a)
             }
             return newStr;
         }
+        //metoda sprawdzajaca czy imie zaczyna sie na R/r jesli tak osoba gra na banjo w przeciwnym razie nie  
+         public static string AreYouPlayingBanjo(string name)
+     {
+        return name += (name[0]=='R' || name[0]=='r') ? " plays banjo" : " does not play banjo";
+    }
     }
