@@ -1169,4 +1169,15 @@ public static string Gordon(string a)
         {
             return (a.Contains(x)) ? true : false;
         }
+        //metoda odejmujaca najwiekszy element tablicy od najmniejszego gdy tablica jest pusta zwraca 0 
+        public static int maxDiff(int[] lst)
+        {
+            if (lst.Length == 0)
+            {
+                return 0;
+            }
+            Array.Sort(lst);
+            int result = lst[lst.Length-1] - lst[0];
+            return result;
+        }
     }
