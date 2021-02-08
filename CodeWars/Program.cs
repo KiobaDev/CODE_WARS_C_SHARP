@@ -1101,4 +1101,21 @@ public static string Gordon(string a)
   {
     return "drink " + (old < 14 ? "toddy" : old < 18 ? "coke" : old < 21 ? "beer" : "whisky");
   }
+        //metoda dodajaca "spacje" przed znakami zapisanymi z duzej litery w stringu 
+        public static string BreakCamelCase(string str)
+        {
+            string newStr = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] >= 'A' && str[i]<='Z')
+                {
+                    newStr += " " + str[i];
+                }
+                else
+                {
+                    newStr += str[i];
+                }
+            }
+            return newStr;
+        }
     }
