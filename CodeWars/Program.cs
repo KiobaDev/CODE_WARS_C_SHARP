@@ -1129,4 +1129,13 @@ public static string Gordon(string a)
         {
             return  (bonus == true) ? ("$"+salary * 10).ToString() : ("$"+salary).ToString();
         }
+        //metoda przeliczajaca podany czas na milisekundy 
+        public static int Past(int h, int m, int s)
+        {
+            if((h>=0 && h<24) && (m >= 0 && m < 60) && (s >= 0 && s < 60))
+            {
+                return (s * 1000) + (m * 60000 ) + (h * 3600000);
+            }
+            return 0;
+        }
     }
