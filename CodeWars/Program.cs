@@ -1056,4 +1056,14 @@ public class SumDigPower {
         {
             return Convert.ToString(b);
         }
+        //metoda sprawdzajaca czy parametr pdany funkcji jest palindromem przyklad palindromu "Ile Romanowi dała za ład Iwona moreli" ZRODLO:https://polszczyzna.pl/palindrom-definicja-i-przyklady/
+        public static bool palindrom(string str)
+            {
+            string newStr = "";
+                for(int i = str.Length-1; i >= 0; i--)
+            {
+                newStr += str[i];
+            }
+                return (newStr.ToLower().Replace(" ", "") == str.ToLower().Replace(" ", "")) ? true : false;
+            }
 }
