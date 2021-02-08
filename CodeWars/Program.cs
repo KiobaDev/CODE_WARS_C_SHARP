@@ -1098,19 +1098,7 @@ public static string Gordon(string a)
         }
         //metoda dobierajaca rodzaj napoju zaleznie od podanego jako parametr wieku
         public static string PeopleWithAgeDrink(int old)
-        {
-            if (old < 14)
-            {
-                return "drink toddy";
-            }
-            else if (old < 18)
-            {
-                return "drink coke";
-            }
-            else if (old < 21)
-            {
-                return "drink beer";
-            }
-            return "drink whisky";
-        }
+  {
+    return "drink " + (old < 14 ? "toddy" : old < 18 ? "coke" : old < 21 ? "beer" : "whisky");
+  }
     }
