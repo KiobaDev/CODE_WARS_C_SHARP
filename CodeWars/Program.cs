@@ -1066,4 +1066,34 @@ public class SumDigPower {
             }
                 return (newStr.ToLower().Replace(" ", "") == str.ToLower().Replace(" ", "")) ? true : false;
             }
-}
+        //metoda zamieniajaca wyrazy "na jezyk Gordona Ramsaya" wszystkie samogloski procz 'A' zamieniane są na '*' a samo 'A' na '@' po kazdym wyrazie do stringa nalezalo dodac "!!!! "
+public static string Gordon(string a)
+        {
+            if (string.IsNullOrEmpty(a))
+            {
+                return null;
+            }
+            var newStr = "";
+            a=a.ToUpper();
+            for(int i = 0; i < a.Length; i++)
+            {
+                 if(a[i] == 'E' || a[i] == 'O' || a[i] == 'U' || a[i] == 'I' )
+                {
+                    newStr += '*';
+                }
+                 else if (a[i] == 'A')
+                {
+                    newStr += '@';
+                }
+                 else if(a[i]==' ')
+                {
+                    newStr += "!!!! ";
+                }
+                else
+                {
+                    newStr += a[i];
+                }
+            }
+            return newStr+="!!!!";
+        }
+    }
