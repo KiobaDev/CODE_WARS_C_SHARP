@@ -1138,4 +1138,9 @@ public static string Gordon(string a)
             }
             return 0;
         }
+        //metoda sumujaca wszystkie elementy tablicy 
+         public static double SumArray(double[] array)
+  {
+      return array.Sum();
+  }
     }
