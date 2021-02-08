@@ -1038,4 +1038,17 @@ public class SumDigPower {
     {
       return (n < 0 || m < 0) ? 0 : n*m;
     }
+        //metoda zwracajaca pierwsza niewpisana do tablicy liczbe/cyfre zaczynajac od 0 
+        public static int NextId(int[] ids)
+            {
+                int i = -1;
+                for( ; ; )
+                {
+                  i++;
+                    if (!ids.Contains(i))
+                    {
+                        return i;
+                    }
+                }
+            }
 }
