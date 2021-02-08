@@ -1152,4 +1152,16 @@ public static string Gordon(string a)
         }
       return false;
     }
+        //metoda sprawdzajaca czy wszystkie znaki (bez spacji) sa napsiane z duzej litery jestli tak zwracane jest true w przeciwnym razie false 
+        public static bool IsUpperCase(this string text)
+        {
+            for(int i = 0; i < text.Length; i++)
+            {
+                if (text[i] >= 'a' && text[i] <= 'z')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
