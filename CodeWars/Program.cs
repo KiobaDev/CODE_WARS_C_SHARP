@@ -1123,4 +1123,10 @@ public static string Gordon(string a)
      {
         return name += (name[0]=='R' || name[0]=='r') ? " plays banjo" : " does not play banjo";
     }
+        //metoda zwracaja wyplate zwiekszona 10 krotnie jesli parametr bonus jest rowny true w przeciwnym razie 
+        //pozostawia ja bez zmian w obu przypadkach dopisuje znak $ przed suma i parsujemy na stringa 
+        public static string bonus_time(int salary, bool bonus)
+        {
+            return  (bonus == true) ? ("$"+salary * 10).ToString() : ("$"+salary).ToString();
+        }
     }
