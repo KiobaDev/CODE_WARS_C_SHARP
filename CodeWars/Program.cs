@@ -1164,4 +1164,9 @@ public static string Gordon(string a)
             }
             return true;
         }
+        //metoda sprawdzajaca czy w tablicy obiektow znajduje podany jako parametr obiekt jesli tak zwrozone zostaje true w przeciwnym razie false 
+        public static bool Check(object[] a, object x)
+        {
+            return (a.Contains(x)) ? true : false;
+        }
     }
