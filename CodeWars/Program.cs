@@ -1143,4 +1143,13 @@ public static string Gordon(string a)
   {
       return array.Sum();
   }
+        //metoda sprawdzajaca czy liczba podana jako pierwszy argument jest podzielna przez dwa pozostale argumenty bez reszty jesli tak zwracane jest true 
+        public static bool is_divide_by(int number, int a, int b)
+    {
+        if(number%a==0 && number%b==0)
+        {
+            return true;
+        }
+      return false;
+    }
     }
