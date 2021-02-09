@@ -1180,4 +1180,24 @@ public static string Gordon(string a)
             int result = lst[lst.Length-1] - lst[0];
             return result;
         }
+        //klasyczny fizzbuzz
+        public static string[] GetFizzBuzzArray(int n)
+        {
+            string[] arr = new string[n];
+            int i = 0;
+            int j = 1;
+            while (n > i)
+            {
+                arr[i] += (j % 3 == 0 && j % 5 == 0) ? "FizzBuzz"
+                       : (j % 3 == 0) ? "Fizz" : (j % 5 == 0) ? "Buzz"
+                       : (j % 3 != 0 && j % 5 != 0) ? Convert.ToString(j) : throw new ArgumentOutOfRangeException();
+                i++;
+                j++;
+            }
+            if(arr.Count()==0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            return arr;
+        }
     }
