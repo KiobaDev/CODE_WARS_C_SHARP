@@ -1200,4 +1200,16 @@ public static string Gordon(string a)
             }
             return arr;
         }
+        //metoda dodajaca z podanej jako parametr tablicy tylko te elementy ktore powtarzaja sie n razy w niej 
+        public static int[] DeleteNth(int[] arr, int x) {
+    var result = new List<int>();
+    foreach(var item in arr) 
+    {
+      if(result.Count(i => i == item) < x)
+        {
+            result.Add(item);
+        }
+    }
+    return result.ToArray();
+  }
     }
