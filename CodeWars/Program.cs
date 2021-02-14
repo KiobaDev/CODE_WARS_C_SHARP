@@ -1224,4 +1224,18 @@ public static string Gordon(string a)
             }
             return braces.Length > 0 ? false : true;
         }
+        //metoda usuwajaca powtarzajace sie elementy z tablicy 
+        public static int[] solve(int[] arr)
+        {
+            List<int> list = new List<int>();
+            for(int i = 0; i < arr.Length - 1; i++)
+            {
+                if (!list.Contains(arr[i]))
+                {
+                    list.Add(arr[i]);
+                }
+            }
+            list.ForEach(x => Console.Write(x));
+            return list.ToArray();
+        }
     }
