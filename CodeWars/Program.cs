@@ -1212,4 +1212,13 @@ public static string Gordon(string a)
     }
     return result.ToArray();
   }
+        //metoda sprawdzajaca poprawnosc rozmieszczenia nawiasow w stringu
+        public static bool validBraces(string str)
+        {
+            for(int i = 0; i < str.Length/2; i++)
+            {
+                str = str.Replace("()", "").Replace("[]", "").Replace("{}", "");
+            }
+            return (str.Length > 0) ? false : true;
+        }
     }
