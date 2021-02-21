@@ -1239,4 +1239,5 @@ public static string Gordon(string a)
             list.ForEach(x => Console.Write(x));
             return list.ToArray();
         }
+        //metoda zwracajaca ile wiekow ma podany w parametrze rok 
     }
