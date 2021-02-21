@@ -1239,5 +1239,15 @@ public static string Gordon(string a)
             list.ForEach(x => Console.Write(x));
             return list.ToArray();
         }
+        public static int СenturyFromYear(int year)
+        {
+            int centuries = 0;
+            while (year > 0)
+            {
+                year -= 100;
+                centuries++;
+            }
+            return centuries;
+        }
         //metoda zwracajaca ile wiekow ma podany w parametrze rok 
     }
