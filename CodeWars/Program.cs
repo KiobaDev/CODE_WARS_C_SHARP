@@ -2,7 +2,8 @@ using System;
 using System.Linq;
 
 namespace CodeWars
-{//Road to junior developer 
+{
+    //Road to junior developer 
     class Program
     {
         static void Main(string[] args)
