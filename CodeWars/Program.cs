@@ -1251,4 +1251,11 @@ public static string Gordon(string a)
             return centuries;
         }
         //metoda zwracajaca ile wiekow ma podany w parametrze rok 
+        
+        
+       //metoda zwracajaca nowa tablice z parzystymi liczbami
+     public static int[] NoOdds(int[] values)
+        {
+            return values.Where(x => Math.Abs(x) % 2 != 1).ToArray();
+        }
     }
