@@ -1264,4 +1264,38 @@ public static string Gordon(string a)
         {
             return str.Replace('.','-');
         }
+        
+        //walidacja kodu dna
+        
+        public static string MakeComplement(string dna)
+        {
+            string result = null;
+
+            for (int i = 0; i < dna.Length; i++)
+            {
+                switch (dna[i])
+                {
+                    case 'A':
+                        result += 'T';
+                    break;
+
+                    case 'T':
+                        result += 'A';
+                    break;
+
+                    case 'C':
+                        result += 'G';
+                    break;
+
+                    case 'G':
+                        result += 'C';
+                    break;
+
+                    default:
+                    break;
+                }
+            }
+            
+            return result;
+        }
     }
