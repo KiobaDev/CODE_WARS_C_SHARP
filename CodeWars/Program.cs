@@ -1258,4 +1258,10 @@ public static string Gordon(string a)
         {
             return values.Where(x => Math.Abs(x) % 2 != 1).ToArray();
         }
+        
+        //zastepowanie . na - 
+        public static string ReplaceDots(string str)
+        {
+            return str.Replace('.','-');
+        }
     }
