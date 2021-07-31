@@ -1307,4 +1307,12 @@ public static string Gordon(string a)
 
             return false;
         }
+        
+        //zwraca sume 2 najwiekszych liczb z tablicy
+	public static int sumTwoSmallestNumbers(int[] numbers)
+        {
+            Array.Sort(numbers);
+
+            return numbers[0]+numbers[1];
+        }
     }
