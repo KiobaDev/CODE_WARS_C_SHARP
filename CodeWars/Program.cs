@@ -1298,4 +1298,13 @@ public static string Gordon(string a)
             
             return result;
         }
+        //
+        public static bool IsSquare(int n)
+        {
+            Console.WriteLine(Math.Sqrt(Convert.ToDouble(n)));
+            if (Math.Sqrt(Convert.ToDouble(n)) % 1 == 0)
+                return true;
+
+            return false;
+        }
     }
