@@ -1315,4 +1315,26 @@ public static string Gordon(string a)
 
             return numbers[0]+numbers[1];
         }
+	    
+	    //sprawdzanie czy w stringu wystepuje rowna ilosc x oraz o jesli tak zwraca true inaczej false 
+	    public static bool XO(string input)
+        {
+            input = input.ToLower();
+            int x = 0;
+            int o = 0;
+
+            for(int i =0; i < input.Length; i++)
+            {
+                if (input[i] == 'x')
+                    x++;
+
+                if (input[i] == 'o')
+                    o++;
+            }
+
+            if (x == o)
+                return true;
+
+            return false;
+        }
     }
