@@ -1349,4 +1349,30 @@ public static string Gordon(string a)
             }
             return indexes.ToArray();
         }
+	    
+public static string AlphabetWar(string fight)
+        {
+            int leftSidePoints = 0;
+            int rightSidePoints = 0;
+
+            foreach (var letter in fight)
+            {
+                switch (letter)
+                {
+                    case 'w': leftSidePoints += 4; break;
+                    case 'p': leftSidePoints += 3; break;
+                    case 'b': leftSidePoints += 2; break;
+                    case 's': leftSidePoints += 1; break;
+
+                    case 'm': rightSidePoints += 4; break;
+                    case 'q': rightSidePoints += 3; break;
+                    case 'd': rightSidePoints += 2; break;
+                    case 'z': rightSidePoints += 1; break;
+
+                    default: break;
+                }
+            }
+
+            return leftSidePoints > rightSidePoints ? "Left side wins!" : rightSidePoints > leftSidePoints  ? "Right side wins!" : "Let's fight again!";
+        }	   
     }
