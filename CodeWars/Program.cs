@@ -1337,4 +1337,16 @@ public static string Gordon(string a)
 
             return false;
         }
+	    
+	    //metoda zwracajaca indexy duzych liter w stringu 
+	     public static int[] Capitals(string word)
+        {
+            var indexes = new List<int>();
+            for (int i =0; i< word.Length; i++)
+            {
+                if (word[i] >= 'A' && word[i] <= 'Z')
+                    indexes.Add(i);
+            }
+            return indexes.ToArray();
+        }
     }
